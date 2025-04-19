@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: JiriPallas/kupony
+  branch: main
+
+media_folder: "obrazky"
+public_folder: "/obrazky"
+
+collections:
+  - name: "kupony"
+    label: "Kupony"
+    folder: "kupony"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Název", name: "title", widget: "string" }
+      - { label: "Popis", name: "description", widget: "text" }
+      - { label: "Obrázek", name: "image", widget: "image" }
+      - { label: "Kategorie", name: "kategorie", widget: "select", options: ["Potraviny", "Oděvy", "Elektronika", "Ostatní"] }
